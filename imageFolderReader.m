@@ -21,3 +21,8 @@ for i = 3:size(fileList)
     % Hint: debug the loop body on 1-2 images BEFORE looping over lots of them...
     normal_features = normalizeFeatures01(features);
 end
+
+normal_train_sunset = normal_features(1:size(fileList1, 1) - 2, :);
+normal_train_nonsunset = normal_features((size(fileList1, 1) - 1):(size(fileList2, 1) - 2), :);
+normal_test_sunset = normal_features((size(fileList2, 1) - 1):(size(fileList3, 1) - 2), :);
+normal_test_nonsunset = normal_features((size(fileList3, 1) - 1):(size(fileList4, 1) - 2), :);
