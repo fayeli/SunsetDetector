@@ -35,3 +35,8 @@ for i = 1:length(yTest)
     end
 end
 
+accuracy = (trueNeg + truePos)/length(yTest);
+tpr = truePos/(truePos+falseNeg);
+precision = truePos/(truePos+falsePos);
+fpr = falsePos/(falsePos+trueNeg);
+
